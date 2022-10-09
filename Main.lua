@@ -5,15 +5,28 @@ local Window = OrionLib:MakeWindow({Name = "Strocal.Hub Testing", HidePremium = 
 
 
 -- Values
+_G.Kidnap = true
 
+_G.OnePunch = true
 
-
-
+_G.Telekinesis = true
 
 -- Functions
 
+function Kidnap()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StroyerZ/Strocal.Hub/main/Scripts/Kidnap.lua",true))();
     
+end
     
+function OnePunch()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StroyerZ/Strocal.Hub/main/Scripts/One%20punch%20man.lua",true))();
+
+end
+
+function Telekinesis()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StroyerZ/Strocal.Hub/main/Scripts/Telekinesis.lua",true))();
+
+end
 
 
 -- Tabs
@@ -23,6 +36,8 @@ local HomeTab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+HomeTab:AddParagraph("Hello!","Thanks for using Strocal.Hub. I hope you enjoy the hub. Also just so yk the hub is not completely done yet so expect some stuff to not work! I will try my best to make a good hub for my fellow exploiters to use. Also if you want you can join the discord server :) The server is not completely done as im writing this but will most likely be when you read this. discord.gg/e23U2BwPPP ")
+HomeTab:AddParagraph("Updates","Added FE scripts")
 
 local PlayerTab = Window:MakeTab({
 	Name = "Player",
@@ -44,7 +59,34 @@ GamesTab:AddParagraph("The Presentation Experience","https://web.roblox.com/game
 local ScriptsTab = Window:MakeTab({
 	Name = "Scripts",
 	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+	PremiumOnly = true
+})
+
+ScriptsTab:AddButton({
+	Name = "Kidnap",
+	Callback = function()
+        _G.Kidnap = Value
+        Kidnap()
+      		print("button pressed")
+  	end    
+})
+
+ScriptsTab:AddButton({
+	Name = "One Punch Man",
+	Callback = function()
+        _G.OnePunch = Value
+        OnePunch()
+      		print("button pressed")
+  	end    
+})
+
+ScriptsTab:AddButton({
+	Name = "Telekinesis",
+	Callback = function()
+        _G.Telekinesis = Value
+        Telekinesis()
+      		print("button pressed")
+  	end    
 })
 
 
