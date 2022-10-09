@@ -11,6 +11,8 @@ _G.OnePunch = true
 
 _G.Telekinesis = true
 
+_G.Remove = true
+
 -- Functions
 
 function Kidnap()
@@ -28,6 +30,10 @@ function Telekinesis()
 
 end
 
+function Remove()
+    OrionLib:Destroy()
+
+end
 
 -- Tabs
 local HomeTab = Window:MakeTab({
@@ -37,7 +43,7 @@ local HomeTab = Window:MakeTab({
 })
 
 HomeTab:AddParagraph("Hello!","Thanks for using Strocal.Hub. I hope you enjoy the hub. Also just so yk the hub is not completely done yet so expect some stuff to not work! I will try my best to make a good hub for my fellow exploiters to use. Also if you want you can join the discord server :) The server is not completely done as im writing this but will most likely be when you read this. discord.gg/e23U2BwPPP ")
-HomeTab:AddParagraph("Updates","Added FE scripts")
+HomeTab:AddParagraph("Updates","No new updates yet")
 
 local PlayerTab = Window:MakeTab({
 	Name = "Player",
@@ -89,6 +95,20 @@ ScriptsTab:AddButton({
   	end    
 })
 
+local SettingsTab = Window:MakeTab({
+	Name = "Settings",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+SettingsTab:AddButton({
+	Name = "Destroy UI",
+	Callback = function()
+      		_G.Remove = Value
+            Remove()
+            print("Destroyed Strocal.Hub UI")
+  	end    
+})
 
 elseif game.PlaceId == 189707 then
 local Window = OrionLib:MakeWindow({Name = "Strocal.Hub Natural Disaster", HidePremium = false, SaveConfig = true, ConfigFolder = "StrocalConfig"})
