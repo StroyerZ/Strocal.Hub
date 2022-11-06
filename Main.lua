@@ -65,7 +65,7 @@ GamesTab:AddParagraph("The Presentation Experience","https://web.roblox.com/game
 local ScriptsTab = Window:MakeTab({
 	Name = "Scripts",
 	Icon = "rbxassetid://4483345998",
-	PremiumOnly = true
+	PremiumOnly = false
 })
 
 ScriptsTab:AddButton({
