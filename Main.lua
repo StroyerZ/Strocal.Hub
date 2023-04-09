@@ -6,6 +6,8 @@ local Window = OrionLib:MakeWindow({Name = "Strocal.Hub Testing", HidePremium = 
 
 -- Values
 _G.Kidnap = true
+	
+_G.Fly = true
 
 _G.OnePunch = true
 
@@ -17,6 +19,11 @@ _G.Remove = true
 
 function Kidnap()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/StroyerZ/Strocal.Hub/main/Scripts/Kidnap.lua",true))();
+    
+end
+	
+function Fly()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/StroyerZ/Strocal.Hub/main/Scripts/fly.lua",true))();
     
 end
     
@@ -49,6 +56,15 @@ local PlayerTab = Window:MakeTab({
 	Name = "Player",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+	
+PlayerTab:AddButton({
+	Name = "Fly",
+	Callback = function()
+        _G.Fly = Value
+        Fly()
+      		print("button pressed")
+  	end    
 })
 
 local GamesTab = Window:MakeTab({
