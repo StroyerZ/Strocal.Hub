@@ -1,4 +1,4 @@
-if game.PlaceId == 12109643 then
+if game.PlaceId == 4683265639 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Strocal.Hub Testing", HidePremium = false, IntroText = "Strocal.Hub", SaveConfig = true, ConfigFolder = "StrocalConfig"})
 
